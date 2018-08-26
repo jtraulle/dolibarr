@@ -1,18 +1,13 @@
 linters:
   phpcs:
     standard: PSR2
+    exclude:
+      - 'Generic.WhiteSpace.DisallowTabIndent'
+    extensions: 'php'
     fixer: true
   csslint: {  }
-  shellcheck:
-    shell: bash
-  flake8:
-    fixer: true
-  rubocop:
-    fixer: true
 files:
   ignore:
-    - 'vendor/*'
-    - 'bower_components/*'
-    - 'node_modules/*'
+    - 'htdocs/includes/*'
 fixers:
   enable: true
