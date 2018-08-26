@@ -1,0 +1,13 @@
+linters:
+  phpcs:
+    standard: PSR2
+    exclude:
+      - 'Generic.WhiteSpace.DisallowTabIndent'
+    extensions: 'php'
+    fixer: true
+  csslint: {  }
+files:
+  ignore:
+    - 'htdocs/includes/*'
+fixers:
+  enable: true

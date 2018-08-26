@@ -266,37 +266,36 @@ class Thirdparties extends DolibarrApi
 	 * @url PUT {id}/merge/{idtodelete}
 	 */
 	function merge($id, $idtodelete)
-	{
+    {
 		global $db, $hookmanager;
 
 		$error = 0;
 
-		if ($id == $idtodelete)
-		{
+		if ($id == $idtodelete) {
 			throw new RestException(400, 'Try to merge a thirdparty into itself');
 		}
 
-		if(! DolibarrApiAccess::$user->rights->societe->creer) {
+		if (! DolibarrApiAccess::$user->rights->societe->creer) {
 			throw new RestException(401);
 		}
 
 		$result = $this->company->fetch($id);	// include the fetch of extra fields
-		if( ! $result ) {
+		if (! $result) {
 			throw new RestException(404, 'Thirdparty not found');
 		}
 
-		if( ! DolibarrApi::_checkAccessToResource('societe',$this->company->id)) {
+		if (! DolibarrApi::_checkAccessToResource('societe', $this->company->id)) {
 			throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
 		}
 
 		$this->companytoremove = new Societe($db);
 
 		$result = $this->companytoremove->fetch($idtodelete);	// include the fetch of extra fields
-		if( ! $result ) {
+		if (! $result) {
 			throw new RestException(404, 'Thirdparty not found');
 		}
 
-		if( ! DolibarrApi::_checkAccessToResource('societe',$this->companytoremove->id)) {
+		if (! DolibarrApi::_checkAccessToResource('societe', $this->companytoremove->id)) {
 			throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
 		}
 
