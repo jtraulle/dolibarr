@@ -70,17 +70,17 @@ class Thirdparties extends DolibarrApi
 	 * @throws 	RestException
 	 */
 	function get($id)
-	{
-		if(! DolibarrApiAccess::$user->rights->societe->lire) {
+    {
+		if (! DolibarrApiAccess::$user->rights->societe->lire) {
 			throw new RestException(401);
 		}
 
 		$result = $this->company->fetch($id);
-		if( ! $result ) {
+		if (! $result) {
 			throw new RestException(404, 'Thirdparty not found');
 		}
 
-		if( ! DolibarrApi::_checkAccessToResource('societe',$this->company->id)) {
+		if (! DolibarrApi::_checkAccessToResource('societe', $this->company->id)) {
 			throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
 		}
 
