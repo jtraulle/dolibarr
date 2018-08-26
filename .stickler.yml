@@ -4,7 +4,7 @@ linters:
     exclude:
       - 'Generic.WhiteSpace.DisallowTabIndent'
     extensions: 'php'
-    tab_width: 7
+    tab_width: 8
     fixer: true
 files:
   ignore:
