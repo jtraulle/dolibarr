@@ -265,8 +265,7 @@ class Thirdparties extends DolibarrApi
 	 *
 	 * @url PUT {id}/merge/{idtodelete}
 	 */
-	function merge($id, $idtodelete)
-	{
+	function merge($id, $idtodelete){
 		global $db, $hookmanager;
 
 		$error = 0;
