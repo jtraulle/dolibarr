@@ -69,8 +69,7 @@ class Thirdparties extends DolibarrApi
 	 *
 	 * @throws 	RestException
 	 */
-	function get($id)
-    {
+	function get($id){
 		if (! DolibarrApiAccess::$user->rights->societe->lire) {
 			throw new RestException(401);
 		}
