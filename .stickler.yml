@@ -4,8 +4,8 @@ linters:
     exclude:
       - 'Generic.WhiteSpace.DisallowTabIndent'
     extensions: 'php'
+    tab_width: 7
     fixer: true
-  csslint: {  }
 files:
   ignore:
     - 'htdocs/includes/*'
