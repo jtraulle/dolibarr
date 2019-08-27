@@ -1,27 +1,21 @@
 branches:
   only:
-    - doxygen
-    - develop
+  - develop
 
-# Install dependencies
 addons:
   apt:
     packages:
       - doxygen
       - graphviz
 
-# Build your code e.g. by calling make
 script:
   - cd build/doxygen
-  - ( cat dolibarr-doxygen.doxyfile ; echo "PROJECT_NUMBER=$TRAVIS_BRANCH"; echo "OUTPUT_DIRECTORY=../../build/html"; echo "HTML_OUTPUT=$TRAVIS_BRANCH" ) | doxygen -
+  - ( cat dolibarr-doxygen.doxyfile ; echo "PROJECT_NUMBER=develop" ) | doxygen -
 
-# Deploy using travis builtin GitHub Pages support
 deploy:
   provider: pages
   skip_cleanup: true
-  keep_history: true
   local_dir: $TRAVIS_BUILD_DIR/build/html
   github_token: $GITHUB_API_KEY
   on:
-    all_branches: true
-    condition: $TRAVIS_BRANCH =~ ^(doxygen|develop)$
+    branch: develop
