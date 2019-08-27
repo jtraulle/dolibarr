@@ -45,7 +45,6 @@ matrix:
         apt:
             packages:
             - apache2
-            - libapache2-mod-fcgid
   - php: '7.3'
     env: DB=postgresql
     addons:
@@ -57,7 +56,6 @@ matrix:
               key_url: 'https://www.postgresql.org/media/keys/ACCC4CF8.asc'
             packages:
             - apache2
-            - libapache2-mod-fcgid
             - pgloader
   - php: '5.5'
     env: DB=mariadb
@@ -133,27 +131,16 @@ install:
   echo
 
 - |
-  echo "Installing Parallel Lint"
-  composer -n require jakub-onderka/php-parallel-lint ^0
-  composer -n require jakub-onderka/php-console-highlighter ^0
-  echo
-
-- |
-  echo "Installing PHP Unit"
+  echo "Installing Composer requirements (Parallel Lint, PHP Unit and PHP CodeSniffer)"
   if [ "$TRAVIS_PHP_VERSION" = '5.4' ] || [ "$TRAVIS_PHP_VERSION" = '5.5' ]; then
-    composer -n require phpunit/phpunit ^4
+    composer -n require jakub-onderka/php-parallel-lint ^0 jakub-onderka/php-console-highlighter ^0 phpunit/phpunit ^4 squizlabs/php_codesniffer ^3
   fi
   if [ "$TRAVIS_PHP_VERSION" = '5.6' ] || [ "$TRAVIS_PHP_VERSION" = '7.0' ] || [ "$TRAVIS_PHP_VERSION" = '7.1' ]; then
-    composer -n require phpunit/phpunit ^5
+    composer -n require jakub-onderka/php-parallel-lint ^0 jakub-onderka/php-console-highlighter ^0 phpunit/phpunit ^5 squizlabs/php_codesniffer ^3
   fi
   if [ "$TRAVIS_PHP_VERSION" = '7.2' ] || [ "$TRAVIS_PHP_VERSION" = '7.3' ] || [ "$TRAVIS_PHP_VERSION" = 'nightly' ]; then
-    composer -n require phpunit/phpunit ^5
+    composer -n require jakub-onderka/php-parallel-lint ^0 jakub-onderka/php-console-highlighter ^0 phpunit/phpunit ^5 squizlabs/php_codesniffer ^3
   fi
-  echo
-
-- |
-  echo "Installing PHP CodeSniffer"
-  composer -n require squizlabs/php_codesniffer ^3
   echo
 
 - |
@@ -272,14 +259,9 @@ before_script:
     fi
   - sudo a2enmod rewrite actions alias
   - |
-    if [ "$TRAVIS_PHP_VERSION" = '5.5' ]; then
+    if [ "$TRAVIS_DIST" = 'trusty' ]; then
       sudo a2enmod fastcgi
       sudo chown -R travis:travis /var/lib/apache2/fastcgi
-    fi
-  - |
-    if [ "$TRAVIS_PHP_VERSION" = '7.0' ] || [ "$TRAVIS_PHP_VERSION" = '7.1' ] || [ "$TRAVIS_PHP_VERSION" = '7.2' ] || [ "$TRAVIS_PHP_VERSION" = '7.3' ] || [ "$TRAVIS_PHP_VERSION" = 'nightly' ]; then
-      sudo a2enmod fcgid
-      sudo chown -R travis:travis /var/lib/apache2/fcgid
     fi
   - echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - sudo sed -i -e "s,www-data,travis,g" /etc/apache2/envvars
