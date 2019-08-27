@@ -13,7 +13,7 @@ addons:
 # Build your code e.g. by calling make
 script:
   - cd build/doxygen
-  - ( cat dolibarr-doxygen.doxyfile ; echo "PROJECT_NUMBER=$TRAVIS_BRANCH"; echo "HTML_OUTPUT=html/$TRAVIS_BRANCH" ) | doxygen -
+  - ( cat dolibarr-doxygen.doxyfile ; echo "PROJECT_NUMBER=$TRAVIS_BRANCH"; echo "OUTPUT_DIRECTORY=../../build/html"; echo "HTML_OUTPUT=$TRAVIS_BRANCH" ) | doxygen -
 
 # Deploy using travis builtin GitHub Pages support
 deploy:
