@@ -86,6 +86,8 @@ matrix:
   exclude:
   - php: 'nightly'
     env: DB=postgresql
+  # PHP 7.2 is TravisCI default so we must explicitely exclude it
+  - php: '7.2'
 
 notifications:
   email:
