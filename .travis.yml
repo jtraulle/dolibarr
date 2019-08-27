@@ -179,9 +179,7 @@ before_script:
   - ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
   - sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place /etc/apache2/sites-available/000-default.conf
   - sudo cat /etc/apache2/sites-available/000-default.conf
-  - sudo service apache2 restart
-  - sudo systemctl status apache2.service
-  - sudo journalctl -xe
+  - sudo service apache2 restart && sudo systemctl status apache2.service && sudo journalctl -xe
 
 
 
