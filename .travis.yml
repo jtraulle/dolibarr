@@ -11,25 +11,16 @@ services:
 - memcached
 
 addons:
-  mariadb: '10.0'
-  postgresql: '9.3'
   apt:
     update: true
-    sources:
-    # To use the last version of pgloader, we add repo of postgresql
-    - sourceline: 'deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main'
-      key_url: 'https://www.postgresql.org/media/keys/ACCC4CF8.asc'
     packages:
     # We need a webserver to test the webservices
     # Let's install Apache with.
     - apache2
     # mod_php is not supported by Travis. Add fcgi. We install FPM later on.
     - libapache2-mod-fcgid
-    # We need pgloader for import mysql database into pgsql
-    - pgloader
 
 php:
-- '7.3'
 - nightly
 
 env:
@@ -53,18 +44,48 @@ matrix:
   allow_failures:
   - php: nightly
   include:
+  - php: '7.3'
+    env: DB=mariadb
+    addons:
+        mariadb: '10.0'
+        apt:
+            packages:
+            - libapache2-mod-fcgid
+  - php: '7.3'
+    env: DB=postgresql
+    addons:
+        postgresql: '9.3'
+        apt:
+            sources:
+            - sourceline: 'deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main'
+              key_url: 'https://www.postgresql.org/media/keys/ACCC4CF8.asc'
+            packages:
+            - libapache2-mod-fcgid
+            - pgloader
   - php: '5.5'
     env: DB=mariadb
     dist: trusty
-    sudo: required
+    addons:
+        mariadb: '10.0'
+        apt:
+            packages:
+            - libapache2-mod-fastcgi
   - php: '5.5'
     env: DB=postgresql
     dist: trusty
-    sudo: required
-  # We exclude some combinations not usefull to save Travis CPU
-  exclude:
-  - php: nightly
-    env: DB=postgresql
+    addons:
+        postgresql: '9.3'
+        apt:
+            sources:
+            - sourceline: 'deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main'
+              key_url: 'https://www.postgresql.org/media/keys/ACCC4CF8.asc'
+            packages:
+            - libapache2-mod-fastcgi
+            - pgloader
+  - php: 'nightly'
+    env: DB=mariadb
+    addons:
+        mariadb: '10.0'
 
 notifications:
   email:
