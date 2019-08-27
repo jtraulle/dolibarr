@@ -41,7 +41,7 @@ matrix:
   - php: '7.3'
     env: DB=mariadb
     addons:
-        mariadb: '10.0'
+        mariadb: '10.2'
         apt:
             packages:
             - apache2
@@ -62,7 +62,7 @@ matrix:
     env: DB=mariadb
     dist: trusty
     addons:
-        mariadb: '10.0'
+        mariadb: '10.2'
         apt:
             packages:
             - apache2
@@ -83,7 +83,7 @@ matrix:
   - php: 'nightly'
     env: DB=mariadb
     addons:
-        mariadb: '10.0'
+        mariadb: '10.2'
   exclude:
   - php: 'nightly'
     env: DB=postgresql
@@ -206,7 +206,7 @@ before_script:
 
   - |
     echo "Setting up database"
-    if [ "$DB" = 'mysql' ] || [ "$DB" = 'mariadb' ] || [ "$DB" = 'postgresql' ]; then
+    if [ "$DB" = 'mysql' ] || [ "$DB" = 'mariadb' ]; then
       echo "MySQL"
       mysql -e 'DROP DATABASE IF EXISTS travis;'
       mysql -e 'CREATE DATABASE IF NOT EXISTS travis;'
@@ -267,7 +267,15 @@ before_script:
       # Copy the included pool
       sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.d/www.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.d/www.conf
     fi
-  - sudo a2enmod rewrite actions fastcgi alias
+  - sudo a2enmod rewrite actions alias
+  - |
+    if [ "$TRAVIS_PHP_VERSION" = '5.5' ]; then
+      sudo a2enmod fastcgi
+    fi
+  - |
+    if [ "$TRAVIS_PHP_VERSION" = '7.0' ] || [ "$TRAVIS_PHP_VERSION" = '7.1' ] || [ "$TRAVIS_PHP_VERSION" = '7.2' ] || [ "$TRAVIS_PHP_VERSION" = '7.3' ] || [ "$TRAVIS_PHP_VERSION" = 'nightly' ]; then
+      sudo a2enmod fcgid
+    fi
   - echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - sudo sed -i -e "s,www-data,travis,g" /etc/apache2/envvars
   - sudo chown -R travis:travis /var/lib/apache2/fastcgi
