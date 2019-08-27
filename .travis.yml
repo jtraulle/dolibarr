@@ -13,15 +13,6 @@ services:
 addons:
   apt:
     update: true
-    packages:
-    # We need a webserver to test the webservices
-    # Let's install Apache with.
-    - apache2
-    # mod_php is not supported by Travis. Add fcgi. We install FPM later on.
-    - libapache2-mod-fcgid
-
-php:
-- nightly
 
 env:
   global:
@@ -50,6 +41,7 @@ matrix:
         mariadb: '10.0'
         apt:
             packages:
+            - apache2
             - libapache2-mod-fcgid
   - php: '7.3'
     env: DB=postgresql
@@ -60,6 +52,7 @@ matrix:
             - sourceline: 'deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main'
               key_url: 'https://www.postgresql.org/media/keys/ACCC4CF8.asc'
             packages:
+            - apache2
             - libapache2-mod-fcgid
             - pgloader
   - php: '5.5'
@@ -69,6 +62,7 @@ matrix:
         mariadb: '10.0'
         apt:
             packages:
+            - apache2
             - libapache2-mod-fastcgi
   - php: '5.5'
     env: DB=postgresql
@@ -80,6 +74,7 @@ matrix:
             - sourceline: 'deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main'
               key_url: 'https://www.postgresql.org/media/keys/ACCC4CF8.asc'
             packages:
+            - apache2
             - libapache2-mod-fastcgi
             - pgloader
   - php: 'nightly'
