@@ -30,6 +30,8 @@ env:
   # See https://github.com/DracoBlue/travis-ci-nginx-php-fpm-test
   #- WS=nginx
 
+language: php
+
 matrix:
   fast_finish: true
   allow_failures:
@@ -81,6 +83,9 @@ matrix:
     env: DB=mariadb
     addons:
         mariadb: '10.0'
+  exclude:
+  - php: 'nightly'
+    env: DB=postgresql
 
 notifications:
   email:
