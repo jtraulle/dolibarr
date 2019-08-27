@@ -1,0 +1,33 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$da/de4/class_dolibarr_api.html" title="Class for API REST v1. " alt="" coords="5,740,97,767"/>
+<area shape="rect" id="node2" href="$d8/d2a/class_agenda_events.html" title="AgendaEvents" alt="" coords="156,5,271,32"/>
+<area shape="rect" id="node3" href="$dd/da5/class_bank_accounts.html" title="BankAccounts" alt="" coords="157,56,270,83"/>
+<area shape="rect" id="node4" href="$d7/d6f/class_boms.html" title="Boms" alt="" coords="184,107,243,133"/>
+<area shape="rect" id="node5" href="$d1/df4/class_categories.html" title="Categories" alt="" coords="168,157,259,184"/>
+<area shape="rect" id="node6" href="$de/d29/class_contacts.html" title="Contacts" alt="" coords="174,208,253,235"/>
+<area shape="rect" id="node7" href="$d1/d39/class_contracts.html" title="Contracts" alt="" coords="171,259,255,285"/>
+<area shape="rect" id="node8" href="$db/df8/class_documents.html" title="API class for receive files. " alt="" coords="165,309,261,336"/>
+<area shape="rect" id="node9" href="$da/dfb/class_donations.html" title="Donations" alt="" coords="170,360,257,387"/>
+<area shape="rect" id="node10" href="$db/dfd/class_expense_reports.html" title="ExpenseReports" alt="" coords="151,411,275,437"/>
+<area shape="rect" id="node11" href="$d0/dd8/class_interventions.html" title="Interventions" alt="" coords="161,461,266,488"/>
+<area shape="rect" id="node12" href="$d7/d1b/class_invoices.html" title="Invoices" alt="" coords="177,512,250,539"/>
+<area shape="rect" id="node13" href="$df/dfc/class_members.html" title="Members" alt="" coords="172,563,255,589"/>
+<area shape="rect" id="node14" href="$d6/d20/class_members_types.html" title="MembersTypes" alt="" coords="155,613,272,640"/>
+<area shape="rect" id="node15" href="$d1/d63/class_my_module_api.html" title="MyModuleApi" alt="" coords="160,664,267,691"/>
+<area shape="rect" id="node16" href="$de/d8f/class_orders.html" title="Orders" alt="" coords="181,715,246,741"/>
+<area shape="rect" id="node17" href="$df/d55/class_products.html" title="Products" alt="" coords="174,765,253,792"/>
+<area shape="rect" id="node18" href="$dd/d2a/class_projects.html" title="Projects" alt="" coords="177,816,250,843"/>
+<area shape="rect" id="node19" href="$d1/dca/class_proposals.html" title="Proposals" alt="" coords="171,867,255,893"/>
+<area shape="rect" id="node20" href="$da/d01/class_setup.html" title="Setup" alt="" coords="183,917,243,944"/>
+<area shape="rect" id="node21" href="$d8/d53/class_shipments.html" title="Shipments" alt="" coords="168,968,259,995"/>
+<area shape="rect" id="node22" href="$de/dfe/class_stock_movements.html" title="StockMovements" alt="" coords="147,1019,280,1045"/>
+<area shape="rect" id="node23" href="$d4/da4/class_subscriptions.html" title="Subscriptions" alt="" coords="159,1069,267,1096"/>
+<area shape="rect" id="node24" href="$db/d24/class_supplier_invoices.html" title="SupplierInvoices" alt="" coords="151,1120,276,1147"/>
+<area shape="rect" id="node25" href="$d4/df1/class_supplier_orders.html" title="SupplierOrders" alt="" coords="155,1171,272,1197"/>
+<area shape="rect" id="node26" href="$d7/d8a/class_supplierproposals.html" title="Supplierproposals" alt="" coords="145,1221,281,1248"/>
+<area shape="rect" id="node27" href="$dc/d2a/class_tasks.html" title="Tasks" alt="" coords="185,1272,241,1299"/>
+<area shape="rect" id="node28" href="$dc/d18/class_thirdparties.html" title="Thirdparties" alt="" coords="165,1323,262,1349"/>
+<area shape="rect" id="node29" href="$d3/d47/class_tickets.html" title="Tickets" alt="" coords="180,1373,247,1400"/>
+<area shape="rect" id="node30" href="$db/d7f/class_users.html" title="Users" alt="" coords="184,1424,243,1451"/>
+<area shape="rect" id="node31" href="$d3/d9f/class_warehouses.html" title="Warehouses" alt="" coords="164,1475,263,1501"/>
+</map>

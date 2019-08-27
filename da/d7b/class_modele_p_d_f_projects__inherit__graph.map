@@ -1,0 +1,7 @@
+<map id="ModelePDFProjects" name="ModelePDFProjects">
+<area shape="rect" id="node3" href="$de/dac/classdoc__generic__project__odt.html" title="Class to build documents using ODF templates generator. " alt="" coords="5,155,184,181"/>
+<area shape="rect" id="node4" href="$de/df0/classpdf__baleine.html" title="Class to manage generation of project document Baleine. " alt="" coords="209,155,303,181"/>
+<area shape="rect" id="node5" href="$d3/d7c/classpdf__beluga.html" title="Class to manage generation of project document Baleine. " alt="" coords="327,155,419,181"/>
+<area shape="rect" id="node6" href="$d7/d07/classpdf__timespent.html" title="Class to manage generation of project document Baleine. " alt="" coords="444,155,559,181"/>
+<area shape="rect" id="node2" href="$d8/d6e/class_common_doc_generator.html" title="Parent class for documents generators. " alt="" coords="229,5,400,32"/>
+</map>

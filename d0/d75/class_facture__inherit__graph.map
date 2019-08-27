@@ -1,0 +1,4 @@
+<map id="Facture" name="Facture">
+<area shape="rect" id="node2" href="$d6/dc8/class_common_invoice.html" title="Superclass for invoices classes. " alt="" coords="5,80,131,107"/>
+<area shape="rect" id="node3" href="$db/d09/class_common_object.html" title="Parent class of all other business classes (invoices, contracts, proposals, orders, ...) " alt="" coords="7,5,129,32"/>
+</map>

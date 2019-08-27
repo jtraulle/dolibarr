@@ -1,0 +1,26 @@
+var class_facturation =
+[
+    [ "__construct", "dc/d46/class_facturation.html#a095c5d389db211932136b53f25f39685", null ],
+    [ "ajoutArticle", "dc/d46/class_facturation.html#a8d27f1d7d7186328592178cad11eeb3b", null ],
+    [ "calculTotaux", "dc/d46/class_facturation.html#a71884f3f59d45d989dc83fb83e2b4bf3", null ],
+    [ "getSetPaymentMode", "dc/d46/class_facturation.html#a4b15a686270fde23090cdba6eda6055c", null ],
+    [ "id", "dc/d46/class_facturation.html#acef90a3fc102ea3a3834fc530ebd2ae4", null ],
+    [ "montantEncaisse", "dc/d46/class_facturation.html#a40874a11c4cbcaffdd0eed8c7902325c", null ],
+    [ "montantRemise", "dc/d46/class_facturation.html#a4767a261ccfbbae1c0eae218a84fb585", null ],
+    [ "montantRendu", "dc/d46/class_facturation.html#a435425101de4326495dae43c8f51c735", null ],
+    [ "montantTva", "dc/d46/class_facturation.html#aaf92127cc959e7072c6f263dbab5de9c", null ],
+    [ "numInvoice", "dc/d46/class_facturation.html#ab46835c45bd7ba92c5e470ac536c4f24", null ],
+    [ "paiementLe", "dc/d46/class_facturation.html#aee77e10390270e85b4f70e9ea8b0a487", null ],
+    [ "prix", "dc/d46/class_facturation.html#afa291a305449a1a40d61bc7399d310ba", null ],
+    [ "prixTotalHt", "dc/d46/class_facturation.html#a199e278d227731f5a27a49244bae7b83", null ],
+    [ "prixTotalTtc", "dc/d46/class_facturation.html#a7831ebf78ae4513669b9fd19ccaad880", null ],
+    [ "qte", "dc/d46/class_facturation.html#ab77b3a1360bbecf436d9462ac3b668d9", null ],
+    [ "raz", "dc/d46/class_facturation.html#a8ef2a31eff40c7345c9081e69f529af4", null ],
+    [ "razPers", "dc/d46/class_facturation.html#a00df25dea0f0247297c7b30214b37382", null ],
+    [ "ref", "dc/d46/class_facturation.html#ada387dfe861d60377edfbfa2bb967e92", null ],
+    [ "remisePercent", "dc/d46/class_facturation.html#a2a88e967e78395c61a5531789393ef33", null ],
+    [ "stock", "dc/d46/class_facturation.html#a50d564f5c014097a42f686618cb82584", null ],
+    [ "supprArticle", "dc/d46/class_facturation.html#ad51e4fdcb2f2ed76395cdb04faa77d59", null ],
+    [ "tva", "dc/d46/class_facturation.html#a47f5f8ca27b155fe6efdaf328ee9ce92", null ],
+    [ "$num_facture", "dc/d46/class_facturation.html#a35cf45478669969427ac2087e478ad50", null ]
+];

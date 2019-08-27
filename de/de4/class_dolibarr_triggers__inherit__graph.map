@@ -1,0 +1,12 @@
+<map id="DolibarrTriggers" name="DolibarrTriggers">
+<area shape="rect" id="node2" href="$d9/d54/class_interface_actions_auto.html" title="Class of triggered functions for agenda module. " alt="" coords="203,5,357,32"/>
+<area shape="rect" id="node3" href="$d2/d34/class_interface_actions_blocked_log.html" title="Class of triggered functions for agenda module. " alt="" coords="181,56,379,83"/>
+<area shape="rect" id="node4" href="$da/d19/class_interface_i_f_t_t_t.html" title="Class of triggers for IFTTT module. " alt="" coords="225,107,335,133"/>
+<area shape="rect" id="node5" href="$d3/dfb/class_interface_ldapsynchro.html" title="Class of triggers for ldap module. " alt="" coords="201,157,359,184"/>
+<area shape="rect" id="node6" href="$d6/dd2/class_interface_logevents.html" title="Class of triggers for security audit events. " alt="" coords="208,208,352,235"/>
+<area shape="rect" id="node7" href="$de/d39/class_interface_mailman_spipsynchro.html" title="Class of triggers for MailmanSpip module. " alt="" coords="175,259,385,285"/>
+<area shape="rect" id="node8" href="$da/d19/class_interface_my_module_triggers.html" title="Class of triggers for MyModule module. " alt="" coords="185,309,375,336"/>
+<area shape="rect" id="node9" href="$dd/dc6/class_interface_notification.html" title="Class of triggers for notification module. " alt="" coords="205,360,355,387"/>
+<area shape="rect" id="node10" href="$d7/dd3/class_interface_ticket_email.html" title="Class of triggers for ticket module. " alt="" coords="205,411,355,437"/>
+<area shape="rect" id="node11" href="$d7/dde/class_interface_workflow_manager.html" title="Class of triggers for workflow module. " alt="" coords="186,461,374,488"/>
+</map>

@@ -1,0 +1,26 @@
+var class_simple_open_i_d =
+[
+    [ "__construct", "d6/dbb/class_simple_open_i_d.html#a095c5d389db211932136b53f25f39685", null ],
+    [ "array2url", "d6/dbb/class_simple_open_i_d.html#a131c2ac61a35a7201f9df5fa8a156cc1", null ],
+    [ "CURL_Request", "d6/dbb/class_simple_open_i_d.html#a6267ae1a53cf2bbf8fa333a5d582522d", null ],
+    [ "ErrorStore", "d6/dbb/class_simple_open_i_d.html#a17c5ee7e76f25ad4b3afcf8739ba2cbc", null ],
+    [ "FSOCK_Request", "d6/dbb/class_simple_open_i_d.html#a9e864bf9fbe9a9e98e31cc3cb880864e", null ],
+    [ "GetError", "d6/dbb/class_simple_open_i_d.html#ae569552e5dd315ac096297bf8e61d177", null ],
+    [ "GetIdentity", "d6/dbb/class_simple_open_i_d.html#a149046565a138c070b4e3ad3f1797ca2", null ],
+    [ "GetOpenIDServer", "d6/dbb/class_simple_open_i_d.html#aad7dd1791af08a9404a53b0e56028161", null ],
+    [ "GetRedirectURL", "d6/dbb/class_simple_open_i_d.html#aafa721138e9a729ae4302dd0984e5ea5", null ],
+    [ "HTML2OpenIDServer", "d6/dbb/class_simple_open_i_d.html#aaaecfa50392c2837d080cb9abe434054", null ],
+    [ "IsError", "d6/dbb/class_simple_open_i_d.html#a0e891e2bb244521ac9603655ea200344", null ],
+    [ "OpenID_Standarize", "d6/dbb/class_simple_open_i_d.html#ae8ff2edc9212c4954c55ba4bb0a42d7a", null ],
+    [ "Redirect", "d6/dbb/class_simple_open_i_d.html#a164a4479b09ebdeaea72e64093b245c1", null ],
+    [ "sendDiscoveryRequestToGetXRDS", "d6/dbb/class_simple_open_i_d.html#aa18086d8559a4bbf49ab8d01bd8de561", null ],
+    [ "SetApprovedURL", "d6/dbb/class_simple_open_i_d.html#a532fe6ef0f2da555e93b75f16912ea82", null ],
+    [ "SetCancelURL", "d6/dbb/class_simple_open_i_d.html#a3c3c7a3be979524fad28282cf51600cb", null ],
+    [ "SetIdentity", "d6/dbb/class_simple_open_i_d.html#a6dd507e793ad4cc31b084574a544daab", null ],
+    [ "SetOpenIDServer", "d6/dbb/class_simple_open_i_d.html#a11503d3cbd4e44237c047e7af8e74bb2", null ],
+    [ "SetOptionalFields", "d6/dbb/class_simple_open_i_d.html#a0bf89670e42d67a02c6be2cad9abfb4a", null ],
+    [ "SetRequiredFields", "d6/dbb/class_simple_open_i_d.html#a70e6aad1128fa12233bf2f0c36082fcb", null ],
+    [ "SetTrustRoot", "d6/dbb/class_simple_open_i_d.html#a4a82a63a1999181471c7d5f39620dac5", null ],
+    [ "splitResponse", "d6/dbb/class_simple_open_i_d.html#a0daecec9e223b3332bd69d3d84c263c0", null ],
+    [ "ValidateWithServer", "d6/dbb/class_simple_open_i_d.html#ad91bc7787eb2e58f40f0919da5012a37", null ]
+];

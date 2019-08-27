@@ -1,0 +1,5 @@
+<map id="CoreObject" name="CoreObject">
+<area shape="rect" id="node3" href="$d3/db5/class_expense_report_ik.html" title="Class to manage inventories. " alt="" coords="5,155,132,181"/>
+<area shape="rect" id="node4" href="$df/dfd/class_expense_report_rule.html" title="Class to manage inventories. " alt="" coords="156,155,299,181"/>
+<area shape="rect" id="node2" href="$db/d09/class_common_object.html" title="Parent class of all other business classes (invoices, contracts, proposals, orders, ...) " alt="" coords="86,5,209,32"/>
+</map>
