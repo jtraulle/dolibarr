@@ -30,7 +30,8 @@ env:
   # See https://github.com/DracoBlue/travis-ci-nginx-php-fpm-test
   #- WS=nginx
 
-language: php
+php:
+- '7.2'
 
 matrix:
   fast_finish: true
