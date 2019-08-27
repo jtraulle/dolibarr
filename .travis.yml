@@ -1,6 +1,7 @@
 branches:
   only:
     - doxygen
+    - develop
 
 # Install dependencies
 addons:
@@ -12,13 +13,11 @@ addons:
 # Build your code e.g. by calling make
 script:
   - cd build/doxygen
-  - doxygen dolibarr-doxygen.doxyfile
+  - ( cat dolibarr-doxygen.doxyfile ; echo "PROJECT_NUMBER=$TRAVIS_BRANCH"; echo "OUTPUT_DIRECTORY=../../build/$TRAVIS_BRANCH" ) | doxygen -
 
 # Deploy using travis builtin GitHub Pages support
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: $TRAVIS_BUILD_DIR/build/html
+  local_dir: $TRAVIS_BUILD_DIR/build/$TRAVIS_BRANCH/html
   github_token: $GITHUB_API_KEY
-  on:
-    branch: doxygen
