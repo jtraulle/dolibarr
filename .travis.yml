@@ -88,6 +88,9 @@ matrix:
     env: DB=postgresql
   # PHP 7.2 is TravisCI default so we must explicitely exclude it
   - php: '7.2'
+    env: DB=mariadb
+  - php: '7.2'
+    env: DB=postgresql
 
 notifications:
   email:
