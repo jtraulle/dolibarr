@@ -23,4 +23,5 @@ deploy:
   local_dir: $TRAVIS_BUILD_DIR/build/$TRAVIS_BRANCH/html
   github_token: $GITHUB_API_KEY
   on:
-    branch: doxygen
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^(doxygen|develop)$
